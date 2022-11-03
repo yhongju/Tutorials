@@ -1,0 +1,9 @@
+// Config file of pacakge "typescript"
+{
+    "compilerOptions": {
+        "strict": true
+    },
+    "include": [
+        "./*/*/src/**/*"
+    ]
+}
