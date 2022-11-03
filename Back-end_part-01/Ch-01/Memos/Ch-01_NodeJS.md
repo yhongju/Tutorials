@@ -1,7 +1,8 @@
 # Node.js의 특징과 강/약점
 
 ## 비동기성
-* *IO needs to be done differently.* - Ryan Dahl, JSConf 2009
+> *IO needs to be done differently.* - Ryan Dahl, JSConf 2009
+
 * Event loop의 비동기: IO의 req-res 병목에 대한 해결책
 * 기존의 동기 방식: 네트워크를 통한 req-res 방식은 res를 기다리는 동안 클럭이 낭비되는 문제
 
@@ -10,6 +11,7 @@
 
 ## 저수준 처리의 한계 극복
 > C와 WASM 모듈을 바인딩
+
 * C: *node-gyp*, WASM: Node@12
 
 ## Node Package Manager
