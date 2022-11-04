@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "echo 'Hello, World!!'"
+    "debug": "node ./Back-end_part-01/Ch-03/src/closure.js"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
