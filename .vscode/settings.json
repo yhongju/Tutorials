@@ -1,10 +1,4 @@
 {
-    "workbench.colorCustomizations": {
-        "[Material Theme Lighter High Contrast]": {
-            "terminal.ansiWhite": "#ffed77",
-        }
-    },
-    "terminal.integrated.fontFamily": "MesloLGS NF, Menlo, Monaco, 'Courier New', monospace",
     "[javascript]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode"
