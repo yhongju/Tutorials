@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "debug": "node ./Back-end_part-01/Ch-03/src/closure.js"
+    "debug": "node ./Back-end_Part-01/Ch-03/src/nClosureTest.js"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
