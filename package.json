@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "debug": "node ./Back-end_Part-01/Ch-03/src/nClosureTest.js"
+    "debug": "node ./Back-end_Part-01/Ch-03/src/coding-apple_prototype.js"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
