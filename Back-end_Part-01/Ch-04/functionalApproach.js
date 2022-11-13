@@ -130,7 +130,50 @@ const peoples = [
 
 // TODO...
 /** Modern way */
-function solveBModern() {}
+function solveBModern() {
+  /** @typedef {Object.<string, Object.<string, number>>} PetsOfCities */
+
+  return (
+    peoples
+      .map(({ city, pet: petOrPets }) => {
+        // Make "all" raw "pet" data to array type
+        const petArr =
+          // Single pet string to array, undifined to array
+          (typeof petOrPets === "string" ? [petOrPets] : petOrPets) || []
+        return { city, petArr }
+      })
+      /**
+       * Make [city, pet] pair
+       *
+       * 1. Get returned values
+       * 2. Call map function for "petArr" argument
+       *
+       * And make value "flat" with flatMap function
+       */
+      .flatMap(({ city, petArr }) =>
+        petArr.map((singlePet) => [city, singlePet])
+      )
+      // TODO: Understand this method
+      /**
+       * reduce function: Final merging arrays
+       *
+       * Second empty object for initial value
+       */
+      .reduce((/** @type {PetsOfCities} */ finRet, [city, pet]) => {
+        if (!city || !pet) {
+          return finRet
+        }
+
+        return {
+          ...finRet,
+          [city]: {
+            ...finRet[city],
+            [pet]: (finRet[city]?.[pet] || 0) + 1,
+          },
+        }
+      }, {})
+  )
+}
 
 /* eslint-disable-next-line no-console */
 console.log(solveBModern())
