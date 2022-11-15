@@ -153,25 +153,32 @@ function solveBModern() {
       .flatMap(({ city, petArr }) =>
         petArr.map((singlePet) => [city, singlePet])
       )
-      // TODO: Understand this method
       /**
-       * reduce function: Final merging arrays
+       * [city, pet] = Optional array. Array that called reduce()
+       * In this case, maybe each array values in parent array
        *
-       * Second empty object for initial value
+       * Second empty object for initial value with type
        */
-      .reduce((/** @type {PetsOfCities} */ finRet, [city, pet]) => {
-        if (!city || !pet) {
-          return finRet
-        }
+      .reduce(
+        (/** @type {PetsOfCities} */ finRet, [city, pet]) => {
+          if (!city || !pet) {
+            return finRet
+          }
 
-        return {
-          ...finRet,
-          [city]: {
-            ...finRet[city],
-            [pet]: (finRet[city]?.[pet] || 0) + 1,
-          },
-        }
-      }, {})
+          return {
+            // Spread all items in accumulated object
+            ...finRet,
+            // [] for index operator
+            [city]: {
+              ...finRet[city],
+              // Optional chain for undifined to 0
+              // "undifined" occured at initial starts(finRet[city] == undifined)
+              [pet]: (finRet[city]?.[pet] || 0) + 1,
+            },
+          }
+        },
+        /** @type {PetsOfCities} */ {}
+      )
   )
 }
 
