@@ -1,5 +1,24 @@
 // @ts-check
 
+/* eslint-disable no-console */
+
+/* Simple promise example */
+
+const flagForTest = false
+const pr = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (flagForTest) {
+      reject(new Error("Rejected!"))
+    } else resolve("Resolved...")
+
+    // flagForTest ? reject(new Error("Rejected!")) : resolve("Resolved...")
+  }, 2000)
+})
+pr.then(
+  (valueFromResolve) => console.log("Success message:", valueFromResolve),
+  (err) => console.log("Error message:", err)
+)
+
 // /** General JavaScript codes */
 //
 // /* eslint-disable no-new, no-console */
@@ -47,38 +66,38 @@
 //     console.log("then() 02")
 //   })
 
-/** Asynchronous feature in JS example 02 */
+// /** Asynchronous feature in JS example 02 */
 
-/* eslint-disable no-new, no-console */
-function returnPromiseAfterTimeout() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(Math.random())
-    }, 1000)
-  })
-}
+// /* eslint-disable no-new, no-console */
+// function returnPromiseAfterTimeout() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve(Math.random())
+//     }, 1000)
+//   })
+// }
 
-returnPromiseAfterTimeout()
-  .then((value) => {
-    console.log(value)
-    return returnPromiseAfterTimeout()
-  })
-  .then((value) => {
-    console.log(value)
-    return returnPromiseAfterTimeout()
-  })
-  .then((value) => {
-    console.log(value)
-    return returnPromiseAfterTimeout()
-  })
-  .then((value) => {
-    console.log(value)
-    return returnPromiseAfterTimeout()
-  })
-  .then((value) => {
-    console.log(value)
-    return returnPromiseAfterTimeout()
-  })
+// returnPromiseAfterTimeout()
+//   .then((value) => {
+//     console.log(value)
+//     return returnPromiseAfterTimeout()
+//   })
+//   .then((value) => {
+//     console.log(value)
+//     return returnPromiseAfterTimeout()
+//   })
+//   .then((value) => {
+//     console.log(value)
+//     return returnPromiseAfterTimeout()
+//   })
+//   .then((value) => {
+//     console.log(value)
+//     return returnPromiseAfterTimeout()
+//   })
+//   .then((value) => {
+//     console.log(value)
+//     return returnPromiseAfterTimeout()
+//   })
 
 // /** If implement this logic without Promise() */
 // /** Cross referencing in this method */
