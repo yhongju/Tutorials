@@ -2,23 +2,6 @@
 
 /* eslint-disable no-console */
 
-/* Simple promise example */
-
-const flagForTest = false
-const pr = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    if (flagForTest) {
-      reject(new Error("Rejected!"))
-    } else resolve("Resolved...")
-
-    // flagForTest ? reject(new Error("Rejected!")) : resolve("Resolved...")
-  }, 2000)
-})
-pr.then(
-  (valueFromResolve) => console.log("Success message:", valueFromResolve),
-  (err) => console.log("Error message:", err)
-)
-
 // /** General JavaScript codes */
 //
 // /* eslint-disable no-new, no-console */
