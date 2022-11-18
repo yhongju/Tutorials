@@ -4,7 +4,7 @@
 
 /* eslint-disable no-console */
 
-const flagForTest = false
+const flagForTest = true
 
 const promiseExample = new Promise((resolve, reject) => {
   setTimeout(() => {
@@ -20,3 +20,5 @@ const promiseExample = new Promise((resolve, reject) => {
 promiseExample
   .then((value) => console.log(value))
   .catch((err) => console.log(err))
+  /* finally() method: Always runned */
+  .finally(() => console.log("Finally done..."))
