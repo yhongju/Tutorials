@@ -2,16 +2,20 @@
 /* eslint-disable no-console, no-new */
 
 /*
- * "Promise chaining"
- * Escape callback hell with Promise object
+ * "Promise.race"
+ * Winner takes it all
+ * But race WON'T BE FINISHED when all functions were returning
  */
 
-// No curly-braces
+/*
+ * Same functions with "callbackHeaven.js"
+ */
+
 const fn1 = () =>
   new Promise((res, rej) => {
     setTimeout(() => {
       res("Order 01 complete!")
-    }, 1000)
+    }, 1000) // Maybe returned first order and only one
   })
 
 const fn2 = (valueMsg) => {
@@ -45,14 +49,11 @@ const fn3 = (valueMsg) => {
  */
 
 console.log("Init...")
-console.time("Three functions") // For calculate running time
 
-fn1()
-  .then((ret) => fn2(ret)) // "ret" argument == Promise.result value
-  .then((ret) => fn3(ret))
-  .then((ret) => console.log(ret))
-  .catch((err) => console.log(err)) // Error object
-  .finally(() => {
-    console.log("End...")
-    console.timeEnd("Three functions")
-  })
+console.time("Three functions")
+// Functions as an array too
+// "ret" value will be first returned value
+Promise.race([fn1(), fn2(), fn3()]).then((ret) => {
+  console.log(ret)
+  console.timeEnd("Three functions")
+})
