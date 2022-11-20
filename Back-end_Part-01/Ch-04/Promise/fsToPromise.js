@@ -1,20 +1,35 @@
 // @ts-check
-
-/* eslint-disable no-console */
-
-const fs = require("fs")
+/* eslint-disable no-console, no-new */
 
 /**
- * @param {string} fileName
+ * Implement
  */
-function readFileInPromise(fileName) {
-  return new Promise((resolve, reject) => {
-    fs.readFile(fileName, "utf-8", (error, value) => {
-      if (error) reject(error)
 
-      resolve(value)
-    })
-  })
-}
+const fs = require("fs");
 
-readFileInPromise(".gitignore").then((value) => console.log(value))
+const gitignore = "../../../.gitignore";
+
+const readFileImPromise = (fileName) =>
+  new Promise((res, rej) => {
+    fs.readFile(fileName, "utf-8", (err, content) => {
+      if (err) {
+        console.log("Error occured...");
+
+        // Returns rejected Promise object
+        rej(new Error(err));
+      }
+      res(content);
+    });
+  });
+
+readFileImPromise(gitignore).then((content) => console.log(content));
+
+/**
+ * Implemented already in JS
+ */
+
+console.log("Already exists..."); // Guess printed order
+
+fs.promises
+  .readFile(gitignore, "utf-8")
+  .then((content) => console.log(content));
