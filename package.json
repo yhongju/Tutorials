@@ -4,13 +4,15 @@
   },
   "scripts": {
     "debug": "node ./Back-end_Part-01/Ch-05/transpile.js",
-    "build": "esbuild ./Back-end_Part-01/Ch-05/transpile.js --bundle --outfile=build/transpile.js --target=node10.24.1"
+    "build": "esbuild ./Back-end_Part-01/Ch-05/transpile.js --bundle --outfile=build/transpile.js --target=node10.24.1",
+    "server": "nodemon ./Back-end_Part-01/Ch-05/src/main.js"
   },
   "devDependencies": {
     "eslint": "^8.28.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-node": "^11.1.0",
+    "nodemon": "^2.0.20",
     "prettier": "^2.7.1",
     "typescript": "4.0.2"
   },
