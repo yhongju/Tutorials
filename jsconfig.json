@@ -1,9 +1,14 @@
 // Config file of pacakge "typescript"
 {
     "compilerOptions": {
-        "strict": true
+        "strict": true,
+        "checkJs": true,
+        "target": "es2021",
     },
+    "exclude": [
+        "node_modules"
+    ],
     "include": [
-        "./*/*/src/**/*"
+        "./**/*",
     ]
 }
