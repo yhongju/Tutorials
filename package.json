@@ -3,10 +3,11 @@
     "node": "15.14.0"
   },
   "scripts": {
-    "debug": "node ./Back-end_Part-01/Ch-04/Promise/callbackHell.js"
+    "debug": "node ./Back-end_Part-01/Ch-05/transpile.js",
+    "build": "esbuild ./Back-end_Part-01/Ch-05/transpile.js --bundle --outfile=build/transpile.js --target=node10.24.1"
   },
   "devDependencies": {
-    "eslint": "^8.26.0",
+    "eslint": "^8.28.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-node": "^11.1.0",
@@ -14,6 +15,7 @@
     "typescript": "4.0.2"
   },
   "dependencies": {
-    "core-js": "^3.26.1"
+    "core-js": "^3.26.1",
+    "esbuild": "^0.15.15"
   }
 }
