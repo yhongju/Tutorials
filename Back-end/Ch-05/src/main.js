@@ -15,6 +15,7 @@
 
 // Datas
 
+// Define type of single post
 /**
  * @typedef Post
  * @property {string} id
@@ -22,6 +23,7 @@
  * @property {string} content
  */
 
+// Define type of set of posts
 /** @type {Post[]} */
 const posts = [
   {
@@ -77,17 +79,11 @@ const server = http.createServer((req, res) => {
 
     // Check post exists
     if (postById) {
-      // // Practice code
-      // const idAndContentOnly = postById.map((post) => ({
-      //   id: post.id,
-      //   content: post.content
-      // })}))
-
-      res.statusCode = 200;
-
-      // Key: Value
+      // Param1, 2 - Key: Value
       res.setHeader("Content-Type", "application/json; charset=utf-8");
       res.end(JSON.stringify(postById));
+
+      res.statusCode = 200;
     } else {
       // If there is no mathed post
 
@@ -100,7 +96,28 @@ const server = http.createServer((req, res) => {
     // Listening event
     req.setEncoding("utf-8"); // By default, returns Buffer object
     req.on("data", (chunk) => {
-      console.log(chunk);
+      // Parsing requested data to JSON
+      // With typedef for period approach
+
+      /**
+       * @typedef ParsedPostData
+       * @property {string} title
+       * @property {string} content
+       */
+
+      /** @type ParsedPostData */
+      const parsedData = JSON.parse(chunk);
+
+      // Insert to posts DB(?)
+      posts.push({
+        // Generate id value by requested title
+        id: parsedData.title.toLowerCase().replaceAll(" ", "_"),
+        // // Diffrent way wtih RegExp
+        // id: parsedData.title.toLowerCase().replace(/\s/g, "_"),
+
+        title: parsedData.title,
+        content: parsedData.content,
+      });
     });
 
     res.statusCode = 200;
