@@ -1,4 +1,5 @@
-# JavaScript based web and mobile application development
+# Web and mobile application development
+> *Based on JavaScript*
 
 ## Table of contents
 1. [Back-end](#back-end)
