@@ -7,9 +7,9 @@
     "node": "15.14.0"
   },
   "scripts": {
-    "debug": "node ./Back-end/Ch-05/src/transpile.js",
-    "build": "esbuild ./Back-end/Ch-05/src/transpile.js --bundle --outfile=build/transpile.js --target=node10.24.1",
-    "server": "nodemon ./Back-end/Ch-05/src/main.js"
+    "debug": "node ./back-end/ch-05/main.js",
+    "build": "esbuild ./back-end/ch-05/transpile.js --bundle --outfile=build/transpile.js --target=node10.24.1",
+    "server": "nodemon ./back-end/ch-05/main.js"
   },
   "devDependencies": {
     "eslint": "^8.28.0",
