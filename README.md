@@ -1,4 +1,4 @@
-# Web and mobile application development
+# Web and hybrid mobile application development tutorials
 > *Based on JavaScript*
 
 ## Table of contents
@@ -7,13 +7,9 @@
 1. [Mobile application](#mobile-application)
 
 ### Back-end
-#### Tools
 - Node.js
 
 ### Front-end
-#### Tools
 - React
-
 ### Mobile application
-#### Tools
 - React Native
