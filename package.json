@@ -9,7 +9,7 @@
   "scripts": {
     "debug": "node ./back-end/ch-05/main.js",
     "build": "esbuild ./back-end/ch-05/transpile.js --bundle --outfile=build/transpile.js --target=node10.24.1",
-    "server": "nodemon ./back-end/ch-05/main.js"
+    "server": "nodemon $INIT_CWD/server.js"
   },
   "devDependencies": {
     "eslint": "^8.28.0",
