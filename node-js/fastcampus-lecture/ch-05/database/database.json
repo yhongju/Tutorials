@@ -1,0 +1,15 @@
+// Define type of set of posts
+{
+  "posts": [
+    {
+      "id": "id00",
+      "title": "First post title",
+      "content": "Hello world!"
+    },
+    {
+      "id": "id01",
+      "title": "나의 두 번째 포스트", // Hangul
+      "content": "Foo bar!"
+    }
+  ]
+}

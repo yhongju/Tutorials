@@ -13,21 +13,6 @@
  * @property {string} content
  */
 
-// Define type of set of posts
-/** @type {Post[]} */
-const posts = [
-  {
-    id: "id00",
-    title: "First post title",
-    content: "Hello world!",
-  },
-  {
-    id: "id01",
-    title: "나의 두 번째 포스트", // Hangul
-    content: "Foo bar!",
-  },
-];
-
 /**
  * @typedef APIResponse
  * @property {number} statusCode
@@ -40,6 +25,18 @@ const posts = [
  * @property {"GET" | "POST"} method
  * @property {(matches: string[], body: Object.<string, *> | undefined) => Promise<APIResponse>} callback
  */
+
+/* Read file */
+const fs = require("fs");
+
+/** @returns {Promise<Post[]>} */
+const getPostFile = async () => {
+  const fileName = "../database/database.json";
+  const json = fs.promises.readFile(fileName, "utf-8");
+
+  // parse() returns object
+  return JSON.parse(json).posts; // TODO: Fix json type issue
+};
 
 /** @type {Route[]} */
 const routes = [
