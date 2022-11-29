@@ -20,7 +20,7 @@ const PORT = 4000;
 
 const server = http.createServer((req, res) => {
   // Make inline async function for await
-  const dirver = async () => {
+  const driver = async () => {
     // Find request at routes
     const route = routes.find(
       // Find matched route from req's properties
@@ -47,21 +47,24 @@ const server = http.createServer((req, res) => {
       return;
     }
 
-    // Get data to post from request
-    /** @type {string | undefined} */
-    const reqBody =
-      (req.headers["content-type"] === "application/json" &&
-        (await new Promise((resolve) => {
+    // Get data to post(body) from request
+    /** @type {Object.<string, *> | undefined} */ const reqBody =
+      (req.headers["content-type"] === "application/json" && // Only the data is json type
+        (await new Promise((resolve, reject) => {
+          req.setEncoding("utf-8");
           req.on("data", (chunk) => {
-            req.setEncoding("utf-8");
-            resolve(chunk);
+            // try-catch for not JSON format exception
+            try {
+              resolve(JSON.parse(chunk));
+            } catch {
+              reject(new Error("Not JSON format request body."));
+            }
           });
         }))) ||
       undefined;
 
     // If found, Call route's callback function and get Promise object with await
-    // TODO: Get reqBody as an argument
-    const responseValues = await route.callback(postCapturedIdArr);
+    const responseValues = await route.callback(postCapturedIdArr, reqBody);
 
     /* Assign response values */
     // Status code
@@ -78,7 +81,7 @@ const server = http.createServer((req, res) => {
     res.end(responseValues.body);
   };
 
-  dirver();
+  driver();
 });
 
 server.listen(PORT, () => {

@@ -31,14 +31,14 @@ const posts = [
 /**
  * @typedef APIResponse
  * @property {number} statusCode
- * @property {string | object} body
+ * @property {string | Object} body
  */
 
 /**
  * @typedef Route
  * @property {RegExp} url  // Not string for capture id
  * @property {"GET" | "POST"} method
- * @property {(matches: string[]) => Promise<APIResponse>} callback
+ * @property {(matches: string[], body: Object.<string, *> | undefined) => Promise<APIResponse>} callback
  */
 
 /** @type {Route[]} */
@@ -79,10 +79,33 @@ const routes = [
   {
     url: /^\/posts$/,
     method: "POST",
-    callback: async () => ({
-      statusCode: 200,
-      body: {}, // TODO: Implement
-    }),
+    callback: async (_, body) => {
+      // Not JSON body from request
+      if (!body) {
+        return {
+          statusCode: 400,
+          body: "Not JSON format request.",
+        };
+      }
+
+      /** @type {string} */
+      // Off prefer option for type specifying
+      /* eslint-disable-next-line prefer-destructuring */
+      const title = body.title;
+
+      const newPost = {
+        id: title.toLowerCase().replaceAll(" ", "_"),
+        title,
+        content: body.content,
+      };
+
+      posts.push(newPost);
+
+      return {
+        statusCode: 200,
+        body: newPost,
+      };
+    },
   },
 ];
 
