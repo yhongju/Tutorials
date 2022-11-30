@@ -13,7 +13,7 @@ console.log(require("../module-example-modules/animals"));
 console.log(module.require("../module-example-modules/animals")); // Same works
 
 // Destructuring module object
-console.log("\nTeardown module");
+console.log("\nTeardown module object");
 
 const { path, paths, filename } = module;
 console.log({ path, paths, filename });
