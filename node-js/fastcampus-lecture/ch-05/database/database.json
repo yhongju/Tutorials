@@ -1,4 +1,3 @@
-// Define type of set of posts
 {
   "posts": [
     {
@@ -8,7 +7,7 @@
     },
     {
       "id": "id01",
-      "title": "나의 두 번째 포스트", // Hangul
+      "title": "나의 두 번째 포스트",
       "content": "Foo bar!"
     }
   ]
