@@ -29,13 +29,27 @@
 /* Read file */
 const fs = require("fs");
 
-/** @returns {Promise<Post[]>} */
-const getPostFile = async () => {
-  const fileName = "../database/database.json";
-  const json = fs.promises.readFile(fileName, "utf-8");
+// Magic string
+const DB_FILE_NAME =
+  "./node-js/fastcampus-lecture/ch-05/database/database.json";
 
-  // parse() returns object
-  return JSON.parse(json).posts; // TODO: Fix json type issue
+/** @returns {Promise<Post[]>} */
+const getPostsFile = async () => {
+  // If without "await", return value's type will be "Promise<string>" not "string"
+  const json = await fs.promises.readFile(DB_FILE_NAME, "utf-8");
+
+  return JSON.parse(json).posts;
+};
+
+/** @param {Post[]} posts */
+const savePosts = async (posts) => {
+  // Object to write
+  const toWrite = {
+    posts,
+  };
+
+  // If just return, cannot cert file writing done -> DB confusion issue
+  await fs.promises.writeFile(DB_FILE_NAME, JSON.stringify(toWrite), "utf-8");
 };
 
 /** @type {Route[]} */
@@ -46,7 +60,7 @@ const routes = [
     method: "GET",
     callback: async () => ({
       statusCode: 200,
-      body: posts,
+      body: await getPostsFile(),
     }),
   },
   /* Get id specified posts */
@@ -56,6 +70,8 @@ const routes = [
     callback: async (matches) => {
       // Captured ID
       const postId = matches[1];
+
+      const posts = await getPostsFile();
       const retPost = posts.find((post) => post.id === postId); // Find matched post
 
       // If not matched post exists
@@ -96,7 +112,11 @@ const routes = [
         content: body.content,
       };
 
+      const posts = await getPostsFile();
+
+      // Insert to JS object and save file
       posts.push(newPost);
+      savePosts(posts);
 
       return {
         statusCode: 200,
