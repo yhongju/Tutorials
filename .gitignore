@@ -4,3 +4,9 @@
 
 # Modules
 node_modules/
+
+# Python
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints
