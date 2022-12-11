@@ -16,4 +16,4 @@ CMD ["run", "-A", "main.ts"]
 # docker build --build-arg GIT_VERSION=$(git rev-parse HEAD) -t my-fresh-app .
 
 # Run Docker container
-# docker run -t -i -p 80:8000 fresh-app
+# docker run -t -i -p <host_port>:8000 fresh-app
