@@ -17,8 +17,8 @@ const host = "localhost";
 // Original code without changing
 // await start(manifest, { plugins: [twindPlugin(twindConfig)] });
 
-await start(manifest, {
-  plugins: [twindPlugin(twindConfig)],
+await start(manifest, { // `mainfest` type err about $n
+  plugins: [twindPlugin(twindConfig)], // Executed in the order
   port: port,
   host: host,
 });
