@@ -10,3 +10,9 @@ node_modules/
 
 # Jupyter
 .ipynb_checkpoints
+
+# Dataset
+dataset/
+*.csv
+*.parquet
+
