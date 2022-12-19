@@ -2,7 +2,7 @@
 .DS_Store
 .localized
 
-# Modules
+# Node modules
 node_modules/
 
 # Python
@@ -15,4 +15,5 @@ node_modules/
 dataset/
 *.csv
 *.parquet
+*.zip
 
