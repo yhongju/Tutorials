@@ -1,10 +1,13 @@
 import { createElement, render } from "preact";
 
-// interface {
+interface MyButtonProps {
+  text: string;
+}
 
-// }
-
-const MyButton = (props) => <button class="my-button">{props.text}</button>;
+// Returns Virtual DOM tree
+const MyButton = (props: MyButtonProps) => (
+  <button class="my-button">{props.text}</button> // Raise TailwindCSS problem
+);
 
 const vdom = <MyButton text="Text from `vdom!`" />;
 // It compiled like this
@@ -22,7 +25,11 @@ const MediaPlayer = () => {
   );
 };
 
-const MediaPlayerCond = (props) => {
+interface MediaPlayerCondProps {
+  playing: string;
+}
+
+const MediaPlayerCond = (props: MediaPlayerCondProps) => {
   return (
     <div>
       {props.playing ? <MyButton text="Stop" /> : <MyButton text="Play" />}
@@ -50,7 +57,11 @@ const MediaPlayerCond = (props) => {
  * // [<a />, <b />]
  */
 
-const MyButtonChild = (props) => {
+interface MyButtonChildProps {
+  children: Array<unknown | string>;
+}
+
+const MyButtonChild = (props: MyButtonChildProps) => {
   // console.log(props.children);
   return <button class="my-button">{props.children}</button>; // children: Nested component
 };
