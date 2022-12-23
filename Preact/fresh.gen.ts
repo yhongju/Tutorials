@@ -8,8 +8,18 @@ import * as $1 from "./routes/api/joke.ts";
 import * as $2 from "./routes/class-components.tsx";
 import * as $3 from "./routes/components-try-it.tsx";
 import * as $4 from "./routes/components.tsx";
-import * as $5 from "./routes/index.tsx";
-import * as $6 from "./routes/state.tsx";
+import * as $5 from "./routes/context-auth-usage.tsx";
+import * as $6 from "./routes/context-using-hooks.tsx";
+import * as $7 from "./routes/context.tsx";
+import * as $8 from "./routes/index.tsx";
+import * as $9 from "./routes/refs-in-class.tsx";
+import * as $10 from "./routes/refs-pass-to-vdom.tsx";
+import * as $11 from "./routes/refs-try-it.tsx";
+import * as $12 from "./routes/refs-with-hooks.tsx";
+import * as $13 from "./routes/refs.tsx";
+import * as $14 from "./routes/state-in-func-try-it.tsx";
+import * as $15 from "./routes/state-in-func.tsx";
+import * as $16 from "./routes/state.tsx";
 import * as $$0 from "./islands/Counter.tsx";
 
 const manifest = {
@@ -19,8 +29,18 @@ const manifest = {
     "./routes/class-components.tsx": $2,
     "./routes/components-try-it.tsx": $3,
     "./routes/components.tsx": $4,
-    "./routes/index.tsx": $5,
-    "./routes/state.tsx": $6,
+    "./routes/context-auth-usage.tsx": $5,
+    "./routes/context-using-hooks.tsx": $6,
+    "./routes/context.tsx": $7,
+    "./routes/index.tsx": $8,
+    "./routes/refs-in-class.tsx": $9,
+    "./routes/refs-pass-to-vdom.tsx": $10,
+    "./routes/refs-try-it.tsx": $11,
+    "./routes/refs-with-hooks.tsx": $12,
+    "./routes/refs.tsx": $13,
+    "./routes/state-in-func-try-it.tsx": $14,
+    "./routes/state-in-func.tsx": $15,
+    "./routes/state.tsx": $16,
   },
   islands: {
     "./islands/Counter.tsx": $$0,
