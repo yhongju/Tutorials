@@ -5,8 +5,13 @@ class App extends Component {
     clicked: false,
   };
 
+  /**
+   * Clicking the button calls `setState`
+   * `setState` causes Preact to call class' `render` again
+   * `render` causes Preact to upatde the button's text in the DOM
+   */
   handleClick = () => {
-    console.log("On click...");
+    console.log("Clicked");
     this.setState({ clicked: true });
   };
 
