@@ -13,6 +13,7 @@ node_modules/
 
 # Dataset
 dataset/
+data/
 *.csv
 *.parquet
 *.zip
