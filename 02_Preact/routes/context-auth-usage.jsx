@@ -40,9 +40,13 @@ const Login = () => {
   return (
     <div class="logged-out">
       {/* Set user as `bob` */}
-      <button onClick={() => setUser("Bob")}>Login as `Bob`</button>
+      <button onClick={() => setUser({ name: "Bob" })}>Login as `Bob`</button>
     </div>
   );
 };
 
 export default App;
+
+// // Working in tutorial page
+// import { render } from "preact";
+// render(<App />, document.body);
