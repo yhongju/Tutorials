@@ -9,17 +9,28 @@ import * as $2 from "./routes/class-components.tsx";
 import * as $3 from "./routes/components-try-it.tsx";
 import * as $4 from "./routes/components.tsx";
 import * as $5 from "./routes/context-auth-usage.jsx";
-import * as $6 from "./routes/context-using-hooks.tsx";
-import * as $7 from "./routes/context.tsx";
-import * as $8 from "./routes/index.tsx";
-import * as $9 from "./routes/refs-in-class.tsx";
-import * as $10 from "./routes/refs-pass-to-vdom.tsx";
-import * as $11 from "./routes/refs-try-it.tsx";
-import * as $12 from "./routes/refs-with-hooks.tsx";
-import * as $13 from "./routes/refs.tsx";
-import * as $14 from "./routes/state-in-func-try-it.tsx";
-import * as $15 from "./routes/state-in-func.tsx";
-import * as $16 from "./routes/state.tsx";
+import * as $6 from "./routes/context-try-it.jsx";
+import * as $7 from "./routes/context-using-hooks.tsx";
+import * as $8 from "./routes/context.tsx";
+import * as $9 from "./routes/error-handling-try-it.jsx";
+import * as $10 from "./routes/error-handling.jsx";
+import * as $11 from "./routes/index.tsx";
+import * as $12 from "./routes/keys-do-not-use.jsx";
+import * as $13 from "./routes/keys-recommend-way.jsx";
+import * as $14 from "./routes/keys-try-it.jsx";
+import * as $15 from "./routes/keys.jsx";
+import * as $16 from "./routes/refs-in-class.tsx";
+import * as $17 from "./routes/refs-pass-to-vdom.tsx";
+import * as $18 from "./routes/refs-try-it.tsx";
+import * as $19 from "./routes/refs-with-hooks.tsx";
+import * as $20 from "./routes/refs.tsx";
+import * as $21 from "./routes/side-effects-dep-arr.jsx";
+import * as $22 from "./routes/side-effects-lifecycle.jsx";
+import * as $23 from "./routes/side-effects-try-it.jsx";
+import * as $24 from "./routes/side-effects.jsx";
+import * as $25 from "./routes/state-in-func-try-it.tsx";
+import * as $26 from "./routes/state-in-func.tsx";
+import * as $27 from "./routes/state.tsx";
 import * as $$0 from "./islands/Counter.tsx";
 
 const manifest = {
@@ -30,17 +41,28 @@ const manifest = {
     "./routes/components-try-it.tsx": $3,
     "./routes/components.tsx": $4,
     "./routes/context-auth-usage.jsx": $5,
-    "./routes/context-using-hooks.tsx": $6,
-    "./routes/context.tsx": $7,
-    "./routes/index.tsx": $8,
-    "./routes/refs-in-class.tsx": $9,
-    "./routes/refs-pass-to-vdom.tsx": $10,
-    "./routes/refs-try-it.tsx": $11,
-    "./routes/refs-with-hooks.tsx": $12,
-    "./routes/refs.tsx": $13,
-    "./routes/state-in-func-try-it.tsx": $14,
-    "./routes/state-in-func.tsx": $15,
-    "./routes/state.tsx": $16,
+    "./routes/context-try-it.jsx": $6,
+    "./routes/context-using-hooks.tsx": $7,
+    "./routes/context.tsx": $8,
+    "./routes/error-handling-try-it.jsx": $9,
+    "./routes/error-handling.jsx": $10,
+    "./routes/index.tsx": $11,
+    "./routes/keys-do-not-use.jsx": $12,
+    "./routes/keys-recommend-way.jsx": $13,
+    "./routes/keys-try-it.jsx": $14,
+    "./routes/keys.jsx": $15,
+    "./routes/refs-in-class.tsx": $16,
+    "./routes/refs-pass-to-vdom.tsx": $17,
+    "./routes/refs-try-it.tsx": $18,
+    "./routes/refs-with-hooks.tsx": $19,
+    "./routes/refs.tsx": $20,
+    "./routes/side-effects-dep-arr.jsx": $21,
+    "./routes/side-effects-lifecycle.jsx": $22,
+    "./routes/side-effects-try-it.jsx": $23,
+    "./routes/side-effects.jsx": $24,
+    "./routes/state-in-func-try-it.tsx": $25,
+    "./routes/state-in-func.tsx": $26,
+    "./routes/state.tsx": $27,
   },
   islands: {
     "./islands/Counter.tsx": $$0,
