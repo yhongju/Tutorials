@@ -8,7 +8,7 @@ import * as $1 from "./routes/api/joke.ts";
 import * as $2 from "./routes/class-components.tsx";
 import * as $3 from "./routes/components-try-it.tsx";
 import * as $4 from "./routes/components.tsx";
-import * as $5 from "./routes/context-auth-usage.tsx";
+import * as $5 from "./routes/context-auth-usage.jsx";
 import * as $6 from "./routes/context-using-hooks.tsx";
 import * as $7 from "./routes/context.tsx";
 import * as $8 from "./routes/index.tsx";
@@ -29,7 +29,7 @@ const manifest = {
     "./routes/class-components.tsx": $2,
     "./routes/components-try-it.tsx": $3,
     "./routes/components.tsx": $4,
-    "./routes/context-auth-usage.tsx": $5,
+    "./routes/context-auth-usage.jsx": $5,
     "./routes/context-using-hooks.tsx": $6,
     "./routes/context.tsx": $7,
     "./routes/index.tsx": $8,
