@@ -14,12 +14,12 @@ import * as $7 from "./routes/context-using-hooks.tsx";
 import * as $8 from "./routes/context.tsx";
 import * as $9 from "./routes/error-handling-try-it.jsx";
 import * as $10 from "./routes/error-handling.jsx";
-import * as $11 from "./routes/index.tsx";
-import * as $12 from "./routes/keys-do-not-use.jsx";
-import * as $13 from "./routes/keys-recommend-way.jsx";
-import * as $14 from "./routes/keys-try-it.jsx";
-import * as $15 from "./routes/keys.jsx";
-import * as $16 from "./routes/onclick-test.jsx";
+import * as $11 from "./routes/fin-link.tsx";
+import * as $12 from "./routes/index.tsx";
+import * as $13 from "./routes/keys-do-not-use.jsx";
+import * as $14 from "./routes/keys-recommend-way.jsx";
+import * as $15 from "./routes/keys-try-it.jsx";
+import * as $16 from "./routes/keys.jsx";
 import * as $17 from "./routes/refs-in-class.tsx";
 import * as $18 from "./routes/refs-pass-to-vdom.tsx";
 import * as $19 from "./routes/refs-try-it.tsx";
@@ -48,12 +48,12 @@ const manifest = {
     "./routes/context.tsx": $8,
     "./routes/error-handling-try-it.jsx": $9,
     "./routes/error-handling.jsx": $10,
-    "./routes/index.tsx": $11,
-    "./routes/keys-do-not-use.jsx": $12,
-    "./routes/keys-recommend-way.jsx": $13,
-    "./routes/keys-try-it.jsx": $14,
-    "./routes/keys.jsx": $15,
-    "./routes/onclick-test.jsx": $16,
+    "./routes/fin-link.tsx": $11,
+    "./routes/index.tsx": $12,
+    "./routes/keys-do-not-use.jsx": $13,
+    "./routes/keys-recommend-way.jsx": $14,
+    "./routes/keys-try-it.jsx": $15,
+    "./routes/keys.jsx": $16,
     "./routes/refs-in-class.tsx": $17,
     "./routes/refs-pass-to-vdom.tsx": $18,
     "./routes/refs-try-it.tsx": $19,
