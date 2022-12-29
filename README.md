@@ -5,19 +5,22 @@
 |Web development|Machine learning|
 |:-:|:-:|
 |[TypeScript](#typescript)|[Kaggle](#kaggle)|
+|[Tailwind CSS](#tailwind-css)||
+|[Node.js](#nodejs)||
 |[Deno](#deno)||
 |[Preact](#preact)||
 |[Fresh](#fresh)||
-|[Node-js](#node-js)||
 
 ### TypeScript
+
+### Tailwind CSS
+
+### Node.js
 
 ### Deno
 
 ### Preact
 
 ### Fresh
-
-### Node-js
 
 ### Kaggle
